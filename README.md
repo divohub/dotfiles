@@ -2,7 +2,7 @@
 
 
 ```bash
-git clone git@github.com:yourusername/dotfiles.git ~/dotfiles
+git clone git@github.com:divohub/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 bash install_zsh.sh
 ```
