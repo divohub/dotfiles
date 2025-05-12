@@ -1,3 +1,4 @@
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -7,7 +8,7 @@ fi
 
 eval "$(zoxide init zsh)"
 
-bindkey '^ ' autosuggest-accept
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 # If you come from bash you might have to change your $PATH.
@@ -89,7 +90,9 @@ fi
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  zsh-autosuggestions
+  zsh-autosuggestions  
+  zsh-syntax-highlighting
+  
 )
 
 function lazygit() {
@@ -144,3 +147,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias py_projects="cd \$(pwd)"
+
+bindkey '^ ' autosuggest-accept
